@@ -8,11 +8,11 @@ Push_swap est un projet algorithmique qui consiste à trier une pile de nombres 
 
 Ce projet m'a permis de comprendre en profondeur les algorithmes de tri, l'optimisation, et la manipulation de structures de données comme les piles. C'est un excellent exercice pour apprendre à penser algorithmiquement et à optimiser ses solutions.
 
-## 🎯 Objectif
+## Objectif
 
 Trier une pile A en utilisant uniquement les opérations autorisées et une pile B auxiliaire, en minimisant le nombre d'opérations.
 
-## 📋 Opérations autorisées
+## Opérations autorisées
 
 - **sa** : Swap A - Échange les deux premiers éléments de la pile A
 - **sb** : Swap B - Échange les deux premiers éléments de la pile B
@@ -26,7 +26,7 @@ Trier une pile A en utilisant uniquement les opérations autorisées et une pile
 - **rrb** : Reverse rotate B - Décale tous les éléments de B vers le bas
 - **rrr** : Reverse rotate les deux - rra et rrb en même temps
 
-## 🚀 Utilisation
+## Utilisation
 
 ### Compilation
 
@@ -53,7 +53,7 @@ ARG="3 2 1 5 4"; ./push_swap $ARG | ./checker $ARG
 
 Le checker affichera **OK** si le tri est correct, **KO** sinon.
 
-## 📊 Critères d'évaluation
+## Critères d'évaluation
 
 Le projet est évalué selon le nombre d'opérations utilisées :
 
@@ -62,51 +62,23 @@ Le projet est évalué selon le nombre d'opérations utilisées :
 - **100 nombres** : Maximum 700 opérations (5 points)
 - **500 nombres** : Maximum 5500 opérations (5 points)
 
-## 🧠 Algorithmes utilisés
+## Algorithmes utilisés
 
-### Approche de base
+Pour les petites piles (3-5 éléments), j'utilise un tri direct avec algorithmes simples. Pour les piles moyennes (100 éléments), j'utilise un algorithme de tri par insertion optimisé. Pour les grandes piles (500 éléments), j'utilise un algorithme de tri par chunks.
 
-1. **Petites piles (3-5 éléments)** : Tri direct avec algorithmes simples
-2. **Piles moyennes (100 éléments)** : Algorithme de tri par insertion optimisé
-3. **Grandes piles (500 éléments)** : Algorithme de tri par chunks ou merge sort adapté
+L'idée principale est de calculer le coût de chaque opération pour choisir la meilleure stratégie selon la taille de la pile.
 
-### Stratégies courantes
+## Ce que j'ai appris
 
-- **Tri par chunks** : Diviser les nombres en chunks et les trier progressivement
-- **Tri par insertion optimisé** : Utiliser la pile B pour optimiser les insertions
-- **Calcul de coûts** : Calculer le coût de chaque opération pour choisir la meilleure
+- Algorithmes de tri et optimisation
+- Manipulation efficace des piles (stacks)
+- Techniques pour minimiser le nombre d'opérations
+- Analyse de complexité temporelle et spatiale
+- Résolution de problèmes complexes de manière méthodique
+- Gestion de mémoire efficace
+- Création de tests pour valider les solutions
 
-## 🎓 Ce que j'ai appris
-
-- **Algorithmes de tri** : Compréhension approfondie des algorithmes de tri
-- **Structures de données** : Manipulation efficace des piles (stacks)
-- **Optimisation** : Techniques pour minimiser le nombre d'opérations
-- **Analyse de complexité** : Comprendre la complexité temporelle et spatiale
-- **Résolution de problèmes** : Approche méthodique pour résoudre des problèmes complexes
-- **Gestion de mémoire** : Allocation et libération efficace de la mémoire
-- **Tests et validation** : Création de tests pour valider les solutions
-
-## 💡 Concepts clés
-
-### Manipulation de piles
-
-Les piles permettent d'accéder uniquement au sommet, ce qui limite les opérations possibles mais force à penser différemment.
-
-### Optimisation
-
-L'optimisation consiste à :
-- Minimiser le nombre d'opérations coûteuses (rotations)
-- Utiliser efficacement la pile B
-- Choisir la meilleure stratégie selon la taille de la pile
-
-### Calcul de coûts
-
-Pour chaque élément à insérer, calculer :
-- Le nombre de rotations nécessaires dans A
-- Le nombre de rotations nécessaires dans B
-- Choisir la combinaison la moins coûteuse
-
-## 🔧 Structure du projet
+## Structure du projet
 
 ```
 push_swap/
@@ -122,17 +94,11 @@ push_swap/
 └── README.md
 ```
 
-## 📝 Notes
+## Notes
 
 - Le projet doit gérer les cas d'erreur (doublons, nombres invalides, etc.)
 - La pile B est utilisée comme pile auxiliaire
 - L'objectif est d'optimiser le nombre d'opérations, pas seulement de trier
-
-## 🎯 Défis
-
-- **Optimisation** : Réduire le nombre d'opérations au maximum
-- **Gestion des cas limites** : Pile déjà triée, doublons, etc.
-- **Performance** : Gérer efficacement de grandes piles (500 éléments)
 
 ---
 
